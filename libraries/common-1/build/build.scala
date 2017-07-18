@@ -5,4 +5,5 @@ class Build(val context: Context) extends Library{
   override def inceptionYear = 2017
   override def description = "classes shared by multiple cbt libraries and needed in stage 1"
   override def dependencies = super.dependencies :+ libraries.cbt.common_0 :+ libraries.cbt.interfaces
+  override def sources = super.sources ++ (projectDirectory / "cbt").listOrFail
 }
